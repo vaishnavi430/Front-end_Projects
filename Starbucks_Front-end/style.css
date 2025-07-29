@@ -26,7 +26,7 @@ body {
 
 /* Background Image for Hero Section */
 .hero-section {
-    background-image: url("../Starbucks/images/bg.jpg"); /* Ensure this path is correct */
+    background-image: url("../Starbucks_Front-end/images/bg.jpg"); /* Ensure this path is correct */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
