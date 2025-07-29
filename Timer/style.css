@@ -1,0 +1,202 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1A2980 0%, #26D0CE 100%); /* Blue to Cyan Gradient */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrollbar due to animations */
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 20px;
+    padding: 50px 60px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+h1 {
+    font-size: 3.2em;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideInTop 1s ease-out forwards;
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 30px;
+}
+
+.time-unit {
+    background: rgba(255, 255, 255, 0.15); /* Slightly darker transparent white */
+    border-radius: 15px;
+    padding: 25px 35px;
+    text-align: center;
+    min-width: 120px; /* Increased min-width for better display */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeInUnit 1.2s ease-out forwards;
+}
+
+.time-unit:hover {
+    transform: translateY(-8px) scale(1.02); /* Lift and slightly enlarge on hover */
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.time-unit span {
+    font-family: 'Orbitron', sans-serif; /* Techy font for numbers */
+    font-size: 4em; /* Larger numbers */
+    font-weight: 700;
+    display: block;
+    color: #8CFFD0; /* Vibrant light green */
+    text-shadow: 0 0 15px rgba(140, 255, 208, 0.7); /* Glow effect */
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.time-unit p {
+    margin: 0;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Countdown Message Styling */
+#countdown-message {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+#countdown-message h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #FEE715; /* Yellow highlight */
+}
+
+#countdown-message p {
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Animations --- */
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUnit {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse animation for the numbers */
+.time-unit.pulse span {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #8CFFD0;
+        text-shadow: 0 0 10px rgba(140, 255, 208, 0.5);
+    }
+    100% {
+        transform: scale(1.05);
+        color: #B5FFED;
+        text-shadow: 0 0 20px rgba(181, 255, 237, 0.9);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 40px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #timer {
+        gap: 20px;
+    }
+
+    .time-unit span {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+
+    #timer {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .time-unit {
+        width: 80%;
+        min-width: unset;
+    }
+
+    .time-unit span {
+        font-size: 2.5em;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Coffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="heading">Starbucks</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search..." autocomplete="off">
+                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>"Brew. Sip. Smile." ☕</h1>
+            <p>"Brewed to perfection, sipped with joy — where every cup tells a story."</p>
+            <button id="book-table-btn" class="main-btn">Book a Table</button>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>Welcome to Starbucks, where passion meets perfection in every cup. We are dedicated to providing an exceptional coffee experience, sourcing the finest beans from around the globe and crafting them into delicious beverages. Our cozy ambiance and friendly staff make us the perfect spot for your daily ritual or a relaxed gathering with friends.</p>
+                <p>Since our humble beginnings, we've grown into a beloved community hub, committed to sustainability and ethical sourcing practices. Join us and discover your new favorite brew!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <i class="fas fa-coffee menu-icon"></i>
+                    <h3>Espresso & Coffee</h3>
+                    <p>Classic espresso, Americano, Latte, Cappuccino, Macchiato.</p>
+                    <span>Starting from $3.50</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-mug-hot menu-icon"></i>
+                    <h3>Signature Drinks</h3>
+                    <p>Caramel Macchiato, Pumpkin Spice Latte, Mocha Frappuccino.</p>
+                    <span>Starting from $5.00</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-leaf menu-icon"></i>
+                    <h3>Teas & Refreshers</h3>
+                    <p>Green tea, Black tea, Herbal infusions, Iced teas, Lemonades.</p>
+                    <span>Starting from $3.00</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-cookie-bite menu-icon"></i>
+                    <h3>Pastries & Snacks</h3>
+                    <p>Croissants, Muffins, Cookies, Sandwiches, Salads.</p>
+                    <span>Starting from $2.50</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-wifi service-icon"></i>
+                    <h3>Free Wi-Fi</h3>
+                    <p>Stay connected while you enjoy your coffee.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-truck-fast service-icon"></i>
+                    <h3>Delivery</h3>
+                    <p>Get your favorite coffee delivered to your doorstep.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-gift service-icon"></i>
+                    <h3>Gift Cards</h3>
+                    <p>The perfect gift for any coffee lover.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-store service-icon"></i>
+                    <h3>Catering</h3>
+                    <p>Coffee and pastries for your events and meetings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Coffee Lane, Brewville, CA 90210</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@starbucksclone.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="main-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Starbucks Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

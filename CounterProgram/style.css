@@ -1,0 +1,77 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container for the counter */
+.container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* Count Label Styling */
+#countlabel {
+    display: block;
+    font-size: 6em; /* Slightly smaller for better fit */
+    font-weight: bold;
+    color: #2575fc; /* Matching one of the gradient colors */
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Container */
+#btnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Button Styling */
+.button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #6a11cb; /* Matching one of the gradient colors */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    min-width: 110px; /* Ensure buttons have a minimum width */
+}
+
+.button:hover {
+    background-color: #2575fc; /* Hover state color */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: translateY(0); /* Return to original position on click */
+    box-shadow: none;
+}
